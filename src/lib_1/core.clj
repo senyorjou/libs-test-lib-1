@@ -1,6 +1,10 @@
-(ns lib-1.core)
+(ns lib-1.core
+  (:require [clj-commons.digest :as digest]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(defn nice-hash
+  "Creates a nice hash"
+  [s]
+  {:md5 (digest/md5 s)
+   :sha1 (digest/sha1 s)})
+
+(nice-hash "123")
