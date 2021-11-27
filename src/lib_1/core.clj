@@ -6,5 +6,3 @@
   [s]
   {:md5 (digest/md5 s)
    :sha1 (digest/sha1 s)})
-
-(nice-hash "123")
